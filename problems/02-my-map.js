@@ -17,7 +17,15 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
 function myMap(array, cb) {
-    // Your code here 
+// Create an empty array to store the results
+    let results = [];
+// Go over each element in the array given
+    for(let i = 0; i < array.length; i++) {
+// Use the callback and apply it to the current element, with the results going into the results array
+        results.push(cb(array[i]));
+    }
+// Return the results array to display the values
+    return results;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

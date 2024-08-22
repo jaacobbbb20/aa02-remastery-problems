@@ -28,7 +28,23 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  // Your code here 
+// Initialize scores, an empty object for the scores to be stored in
+    let scores = {};
+// Go over each score object in the given array
+    for(let person of people) {
+// Take out the name and score from the current object
+      let name = person.name;
+      let score = person.score;
+// If the name already has a key, update the score
+      if (scores.hasOwnProperty(name)) {
+        scores[name] += score;
+      } else {
+// If the name does not have a key yet, add it to the object, along with the score
+          scores[name] = score;
+      }
+    }
+// Return object
+    return scores;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

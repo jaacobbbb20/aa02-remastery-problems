@@ -22,7 +22,11 @@ console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
 
 function myForEach(array, cb) {
-    // Your code here 
+// Go over every element in the array
+    for(let i = 0; i < array.length; i++) {
+// Calling the callback with the current element, index and array.
+        cb(array[i], i, array);
+    }
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

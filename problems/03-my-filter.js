@@ -20,7 +20,18 @@ console.log(result2);      // ['choose', 'words', 'only']
 *******************************************************************************/
 
 function myFilter(array, cb) {
-    // Your code here 
+// Create a new empty array to put the filtered results in
+    let results = [];
+// Go over each element in the given array
+    for( let i = 0; i < array.length; i++) {
+        let element = array[i];
+// Use the callback for the current element
+        if (cb(element)) {
+// If the callback ends up being true, add the element to the results array
+            results.push(element);
+        }
+    }
+    return results;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
